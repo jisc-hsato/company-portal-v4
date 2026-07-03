@@ -1,6 +1,6 @@
 {
-  "name": "社内配布",
-  "short_name": "社内配布",
+  "name": "総務ポータル",
+  "short_name": "総務ポータル",
   "start_url": "/company-portal-v4/",
   "scope": "/company-portal-v4/",
   "display": "standalone",
