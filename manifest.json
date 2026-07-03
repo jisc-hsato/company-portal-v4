@@ -1,0 +1,19 @@
+{
+  "name": "社内配布",
+  "short_name": "社内配布",
+  "start_url": "/company-portal-v2/",
+  "scope": "/company-portal-v2/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
