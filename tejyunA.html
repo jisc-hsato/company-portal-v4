@@ -45,15 +45,11 @@ document.addEventListener('touchstart', function(e) {
 
 document.addEventListener('touchend', function(e) {
     if (isPinching) {
-        if (e.touches.length === 0) {
-            isPinching = false;
-        }
+        if (e.touches.length === 0) isPinching = false;
         return;
     }
-
     let endX = e.changedTouches[0].screenX;
     let diff = endX - startX;
-
     if (diff > 80) location.href = "kinkyuu.html";
     if (diff < -80) location.href = "tejyunB.html";
 });
