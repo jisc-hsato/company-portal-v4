@@ -32,12 +32,29 @@ img{width:100%;display:block;}
 </div>
 
 <script>
-let startX=0;
-document.addEventListener('touchstart',e=>{startX=e.changedTouches[0].screenX;});
-document.addEventListener('touchend',e=>{
- let endX=e.changedTouches[0].screenX;
- let diff=endX-startX;
- if(diff>80) location.href="tejyunA.html";
+let startX = 0;
+let isPinching = false;
+
+document.addEventListener('touchstart', function(e) {
+    if (e.touches.length > 1) {
+        isPinching = true;
+        return;
+    }
+    startX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', function(e) {
+    if (isPinching) {
+        if (e.touches.length === 0) {
+            isPinching = false;
+        }
+        return;
+    }
+
+    let endX = e.changedTouches[0].screenX;
+    let diff = endX - startX;
+
+    if (diff > 80) location.href = "tejyunA.html";
 });
 </script>
 </body>
