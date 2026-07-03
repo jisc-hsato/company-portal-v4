@@ -1,9 +1,11 @@
 {
   "name": "社内配布",
   "short_name": "社内配布",
-  "start_url": "/company-portal-v2/",
-  "scope": "/company-portal-v2/",
+  "start_url": "/company-portal-v4/",
+  "scope": "/company-portal-v4/",
   "display": "standalone",
+  "background_color": "#174a97",
+  "theme_color": "#174a97",
   "icons": [
     {
       "src": "icon-192.png",
