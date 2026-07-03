@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<title>Item 3</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#eee;}
+.header{
+ position:fixed;top:0;left:0;width:100%;
+ background:#174a97;color:white;
+ display:flex;justify-content:space-between;align-items:center;
+ padding:14px 18px;box-sizing:border-box;z-index:1000;
+}
+.header button,.header a{
+ background:white;color:#174a97;border:none;
+ padding:8px 14px;border-radius:8px;
+ font-weight:bold;text-decoration:none;font-size:16px;
+}
+.content{padding-top:70px;}
+img{width:100%;display:block;}
+</style>
+</head>
+<body>
+<div class="header">
+<button onclick="history.back()">←戻る</button>
+<a href="index.html">閉じる</a>
+</div>
+
+<div class="content">
+<img src="item_no3.jpg">
+</div>
+
+<script>
+let startX=0;
+let isPinching=false;
+document.addEventListener('touchstart',function(e){
+ if(e.touches.length>1){isPinching=true;return;}
+ startX=e.changedTouches[0].screenX;
+});
+document.addEventListener('touchend',function(e){
+ if(isPinching){
+   if(e.touches.length===0)isPinching=false;
+   return;
+ }
+ let endX=e.changedTouches[0].screenX;
+ let diff=endX-startX;
+ if(diff>80) location.href="item_no2.html";
+ if(diff<-80) location.href="item_no4.html";
+});
+</script>
+</body>
+</html>
